@@ -12,18 +12,24 @@ namespace SweepstakesProject
         public string FirstName;
         public string LastName;
         public string EmailAddress;
-        public int RegistrationNumber;
+        public int RegistrationNumber = 0;
         
 
         // Constructor
-        public Contestant(string FirstName, string LastName, string EmailAddress, int RegistrationNumber)
+        public Contestant()
         {
-            FirstName = UserInterface.GetUserInputFor("firstName");
-            LastName = UserInterface.GetUserInputFor("lastName");
-            EmailAddress = UserInterface.GetUserInputFor("emailAddress");
-            this.RegistrationNumber = RegistrationNumber;
+            FirstName = UserInterface.GetFirstName();
+            LastName = UserInterface.GetLastName();
+            EmailAddress = UserInterface.GetEmailAddress();
+            RegistrationNumber = GenerateRegNumber();
         }
         // Member Methods
+        public int GenerateRegNumber()
+        {
+            RegistrationNumber++;
+            return RegistrationNumber;
+        }
+
 
     }
 }

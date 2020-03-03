@@ -13,18 +13,26 @@ namespace SweepstakesProject
         {
             Console.WriteLine(prompt);
             return Console.ReadLine();
-        
         }
-        public static void ContestantRegistration()
+        public static string GetFirstName()
         {
-            string firstName = GetUserInputFor("Enter your first name:");
-            string lastName = GetUserInputFor("Enter your last name:");
-            string emailAddress = GetUserInputFor("Enter your email addres:");
-            int registrationNumber = 
+            Console.WriteLine("Please enter your First Name:");
+            return Console.ReadLine();
+        }
+        public static string GetLastName()
+        {
+            Console.WriteLine("Please enter your Last Name:");
+            return Console.ReadLine();
+        }
+        public static string GetEmailAddress()
+        {
+            Console.WriteLine("Please enter your E-mail Address:");
+            return Console.ReadLine();
         }
         public static void DisplayContestantInfor()
         {
-
+            Console.WriteLine();
         }
+
     }
 }

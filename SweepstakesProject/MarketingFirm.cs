@@ -11,18 +11,18 @@ namespace SweepstakesProject
                         // Implement dependency injection in my MarketingFirm class so that I can utilize a sweepstakes manager.
     {
         //Member Variables
-        private string ISweepstakesManager_manager;
+        public ISweepstakesManager manager; //ISweepstakesManager is like a string or int
 
         //Constructor
         public MarketingFirm(ISweepstakesManager manager)
         {
-
+            //injection video
         }
 
         //Member Methods
         public void CreateSweepstake()
         {
-
+            Sweepstakes sweepstake = new Sweepstakes();//what to pass through to create name
         }
     }
 }

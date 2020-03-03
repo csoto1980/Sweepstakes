@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    class Program
+    class Factory //want to build my manager | managers need to be instan | user needs to pick choose which manager | goal is to build a factory| than the factory 
     {
-        static void Main(string[] args)
-        {
-            Simulation simulation = new Simulation();
-            //and run 
-        }
     }
 }

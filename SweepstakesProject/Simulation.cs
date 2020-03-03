@@ -18,7 +18,7 @@ namespace SweepstakesProject
         //Member Methods
         public void CreateMarketingFirmWithManager()
         {
-
+            //create your marketing firm with manager 
         }
     }
 }
