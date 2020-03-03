@@ -8,5 +8,17 @@ namespace SweepstakesProject
 {
     class Simulation
     {
+        //Member Variables
+
+        //Constructor
+        public Simulation()
+        {
+
+        }
+        //Member Methods
+        public void CreateMarketingFirmWithManager()
+        {
+
+        }
     }
 }
