@@ -11,20 +11,23 @@ namespace SweepstakesProject
     //Inherit ISweepstakesManager and implement the methods from the ISweepstakesManager interface using Stack and Queue methods.
     {
         // Member Variables
-        private Stack<Sweepstakes> stack;
+        private readonly Stack<Sweepstakes> stack;
 
         //Constructor
-
-
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
         //Member Methods
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
         }
         public Sweepstakes GetSweepstakes()
         {
-            return;
+            Sweepstakes sweepstakes = stack.Pop();
+            return sweepstakes;
         }
     }
 }

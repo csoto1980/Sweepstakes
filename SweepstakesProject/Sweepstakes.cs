@@ -12,6 +12,7 @@ namespace SweepstakesProject
         private Dictionary<int, Contestant> contestants;
         private string name;
         int dictionaryNumber = 0;
+        Contestant contestantWinner;
         //public string Name; // Property .Name
 
         //Constructor
@@ -20,23 +21,29 @@ namespace SweepstakesProject
             this.name = name;
         }
         //Member Methods
-        public void RegisterContestant(Contestant contestant) //Method for registering each contestant to the sweepstakes //adding contestants to the dictionary & giving a registration number
+        public void RegisterContestant(Contestant contestant) 
         {
-            //add contestant to dictionary of contestants 
             dictionaryNumber++;
             contestants.Add(dictionaryNumber, contestant);
         }
-        public void PrintContestantInfo(Contestant contestant) //pass in contestant infor via .notation
+        
+        public Contestant PickWinner() 
+        {
+            int randomNumber = new Random().Next(1, dictionaryNumber);
+            Contestant contestantWinner = contestants[randomNumber];
+            return contestantWinner;
+        }
+        public void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine("First Name: " + contestant.FirstName + " Last Name: " + contestant.LastName);
             Console.WriteLine("Email Address: " + contestant.EmailAddress);
             Console.WriteLine("Registration #: " + contestant.RegistrationNumber);
         }
-        public Contestant PickWinner() //Method to pick a random contestant from dictionary//
+        public void PrintContestantWinnerInfo(Contestant contestant)
         {
-            int randomNumber = new Random().Next(1, dictionaryNumber);
-            Contestant contestantWinner = contestants[randomNumber];//new Contestant(); | could use dictionary or reg# |
-            return contestantWinner;
+            Console.WriteLine("First Name: " + contestantWinner.FirstName + " Last Name: " + contestantWinner.LastName);
+            Console.WriteLine("Email Address: " + contestantWinner.EmailAddress);
+            Console.WriteLine("Registration #: " + contestantWinner.RegistrationNumber);
         }
         public void NotifyAllContestants()
         {
